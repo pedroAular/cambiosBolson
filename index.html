@@ -1,18 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel= "icon" type= "image/png" href="./imagery/favicom.png">
-    <link rel="stylesheet" href="./style.css">
-    
-    <title>Cambios Bolson</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>CAMBIOS BOLSON</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
 </head>
 <body>
-    <h1>Casa de Cambios Bolsón</h1>
-    <p>cambios bolson funciona como una casa de cambio de forma digital, la idea principal es que se pueda comprar y vender divisas de forma online, en algunos campos como por ejemplo el rut, es importante que sean validos, ya que utilice una expresion regular, aconsejo para la utilizacion de este campo esta pagina https://validarutchile.cl/generador-rut-validos.php</p>
+  <h1>CAMBIOS BOLSON  </h1>
+  <div id="formulario1">
+    <h3>Formulario 1</h3>
+    <form>
+      <div class="formularioDeVenta">
+      <label for="monedaTienes">¿Qué moneda tienes?</label>
+      <select id="monedaTienes" class="form-select form-select-lg mb-3">
+        <option selected disabled>Selecciona una moneda</option>
+        <option value="euro">Euro</option>
+        <option value="dolar">Dólar</option>
+        <option value="pesos_argentinos">Pesos Argentinos</option>
+        <option value="pesos_chilenos">Pesos Chilenos</option>
+        <option value="soles">Soles Peruanos</option>
+      </select>
+      </div>
+    
+      <div class="formularioDeCompra">
+        <label for="monedaQuieres">¿Qué moneda quieres?</label>
+        <select id="monedaQuieres" class="form-select form-select-lg mb-3">
+          <option selected disabled>Selecciona una moneda</option>
+          <option value="euro">Euro</option>
+          <option value="dolar">Dólar</option>
+          <option value="pesos_argentinos">Pesos Argentinos</option>
+          <option value="pesos_chilenos">Pesos Chilenos</option>
+          <option value="soles">Soles Peruanos</option>
+        </select>
+      </div>
+      <div class="divisaVender">
+        <label for="nombre">Ingrese la cantidad que deseas cambiar :</label>
+        <input type="number" name="nombre" id="divisaVender" placeholder="ej: 1.000">
+      </div>
+      <div id="resultado">
+      </div>
+      <button id="calcularBtn">Calcular</button>
+    </form>
+  </div>
 
-    <script async src="main.js"></script>
+  <div class="formulario2">
+    <div class="cuerpo">
+      h1>contáctanos</h1>
+      <form>
+        <div class="validarnombre">
+          <label for="nombre">Ingrese su nombre:</label>
+          <input type="text" name="nombre" id="nombre" placeholder="ej: Pedro Aular">
+        </div>
+        <div class="validarEdad">
+          <label for="edad">Ingrese su edad:</label>
+          <input type="number" name="edad" id="edad" placeholder="ej: 18">
+        </div>
+        <div class="validarRut">
+          <label for="rut">Ingrese su RUT (sin puntos con guión):</label>
+          <input type="text" name="rut" id="rut" placeholder="ej: 12123123-1">
+        </div>
+        <div class="validarCorreo">
+          <label for="email">Ingrese su correo electrónico:</label>
+          <input type="email" name="email" id="email" placeholder="ej: pedro123@gmail.com">
+        </div>
+        <input type="button" value="Continuemos" id="continuemos">
+      </form>
+    </div>
+  </div>
+  <div class="sucursales">
+    <input type="text" id="filtro" placeholder="Buscar sucursal...">
+    <ul id="sucursales">
+    </ul>
+    <div id="mensaje"></div>
+  </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <Script async src="./main.js"></Script>
 </body>
 </html>
