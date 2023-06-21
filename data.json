@@ -1,0 +1,104 @@
+{
+    "sucursales": [
+        {
+            "nombre": "Santiago Centro",
+            "direccion": "Calle 1, Santiago",
+            "horario": "Lunes a Viernes: 9am - 6pm"
+        },
+        {
+            "nombre": "Recoleta",
+            "direccion": "Calle 2, Recoleta",
+            "horario": "Lunes a Viernes: 9am - 5pm"
+        },
+        {
+            "nombre": "providencia",
+            "direccion": "Calle 12, providencia",
+            "horario": "Lunes a Viernes: 9am - 6pm"
+        },
+        {
+            "nombre": "independencia",
+            "direccion": "Calle 122, independencia",
+            "horario": "Lunes a Viernes: 7am - 6pm"
+        },
+        {
+            "nombre": "san miguel",
+            "direccion": "Calle 122, san miguel",
+            "horario": "Lunes a Viernes: 7am - 7pm"
+        },
+        {
+            "nombre": "vitacura",
+            "direccion": "Calle 122, vitacura local 12 ",
+            "horario": "Lunes a Viernes: 7am - 7pm"
+        },
+        {
+            "nombre": "Lo Barnechea",
+            "direccion": "Av. Los Alamos, Lo Barnechea",
+            "horario": "Lunes a Viernes: 8am - 7pm"
+        },
+        {
+            "nombre": "Renca",
+            "direccion": "Calle 3, Renca",
+            "horario": "Lunes a Viernes: 9am - 6pm"
+        },
+        {
+            "nombre": "Valparaíso",
+            "direccion": "Av. Principal, Valparaíso",
+            "horario": "Lunes a Viernes: 9am - 5pm"
+        },
+        {
+            "nombre": "Viña del Mar",
+            "direccion": "Calle 4, Viña del Mar",
+            "horario": "Lunes a Viernes: 10am - 6pm"
+        },
+        {
+            "nombre": "Mancera",
+            "direccion": "Av. Libertad, Mancera",
+            "horario": "Lunes a Viernes: 8:30am - 5:30pm"
+        },
+        {
+            "nombre": "Maipo",
+            "direccion": "Calle 5, Maipo",
+            "horario": "Lunes a Viernes: 9am - 6pm"
+        },
+        {
+            "nombre": "San José del Maipo",
+            "direccion": "Calle Principal, San José del Maipo",
+            "horario": "Lunes a Viernes: 8am - 4pm"
+        },
+        {
+            "nombre": "Macul",
+            "direccion": "Calle 6, Macul",
+            "horario": "Lunes a Viernes: 9am - 7pm"
+        },
+        {
+            "nombre": "San Fernando",
+            "direccion": "Calle 7, San Fernando",
+            "horario": "Lunes a Viernes: 9:30am - 5:30pm"
+        },
+        {
+            "nombre": "Arica",
+            "direccion": "Av. Costanera, Arica",
+            "horario": "Lunes a Viernes: 9am - 6pm"
+        },
+        {
+            "nombre": "Punta Arenas",
+            "direccion": "Calle 8, Punta Arenas",
+            "horario": "Lunes a Viernes: 10am - 5pm"
+        },
+        {
+            "nombre": "Chiloé",
+            "direccion": "Calle 9, Chiloé",
+            "horario": "Lunes a Viernes: 9am - 6pm"
+        },
+        {
+            "nombre": "Antofagasta",
+            "direccion": "Av. Central, Antofagasta",
+            "horario": "Lunes a Viernes: 8:30am - 6:30pm"
+        },
+        {
+            "nombre": "Conchalí",
+            "direccion": "Calle 10, Conchalí",
+            "horario": "Lunes a Viernes: 9am - 5pm"
+        }
+    ]
+}
