@@ -17,12 +17,6 @@ h2{
   font-weight: bold;
   background-color: rgba(244, 240, 240, 0.641);
 }
-.cotizacion{
-  width: 100px;
-  height: 100px;
-  background-color: #244aac;
-  border: solid rgba(0, 0, 0, 0.682);
-}
 
 
 #monedaTienes{
@@ -50,7 +44,7 @@ input {
   width: 100%;
   text-transform: capitalize;
   margin-bottom: 5px;
-  color: rgba(15, 10, 10, 0.819);
+  color: rgba(15, 10, 10, 0.819); 
   font-size: 16px;
   font-weight: bold;
   padding: 5px;
@@ -65,7 +59,7 @@ input {
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
-  background-color: rgba(77, 71, 71, 0.861);
+  background-color: #40558884;
   border-radius: 7%;
   box-sizing: border-box;
   margin: auto;
@@ -74,6 +68,7 @@ input {
 
 }
 .boton {
+  margin-top: 10px;
   background: #244aac;
   color: #fff;
   padding: 20px;
@@ -85,14 +80,19 @@ input {
 
 .formularioDeCompra{
   
-    background-color: rgba(77, 71, 71, 0.541);
+    background-color: #40558884;;
 
 }
 #resultado{
-  background-color: #244aac;
-  width: 240px;
+  margin-top: 10px;
+  background-color: #40558884;
+  width: 260px;
   height: 100px;
+  border-radius: 7px;
+  padding: 20px;
+  text-align: center;
 }
+
 .campo-incorrecto {
     border: 2px solid red;
   } 
@@ -121,12 +121,14 @@ input {
     margin-bottom: 10px;
   } 
 #mensaje {
-  margin-top: 10px;
+  margin-top: 5px;
   font-weight: bold;
-  background-color: #244aac ;
+  background-color: #40558884;
   overflow: auto;
+  text-align: center;
+  border-radius: 7px;
+  padding: 20px;
 }
-
 
 #finalizacion{
   width: 290px;
@@ -134,11 +136,13 @@ input {
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
-  background-color: rgba(77, 71, 71, 0.861);
+  background-color: #40558884;
   border-radius: 7%;
+  text-align: center;
+  padding: 10px 20px;
   box-sizing: border-box;
   margin: auto;
-  border: 2px solid rgba(251, 255, 0, 0.857);
+  border: 2px solid rgba(255, 149, 0, 0.857);
 
 }
 .oculto {
