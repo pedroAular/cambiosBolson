@@ -1,8 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
   var video = document.getElementById("background-video");
-  video.playbackRate = 0.37;
+  video.playbackRate = 0.40;
 });
-
 
 function habilitarValidacionEnTiempoReal1() {
   document
@@ -98,6 +97,7 @@ function actualizarResultado() {
   }
 }
 
+actualizarResultado();
 habilitarValidacionEnTiempoReal1();
 
 function habilitarValidacionEnTiempoReal() {
@@ -105,11 +105,13 @@ function habilitarValidacionEnTiempoReal() {
   let edadInput = document.getElementById("edad");
   let rutInput = document.getElementById("rut");
   let emailInput = document.getElementById("email");
+  let divisaVenderInput = document.getElementById("divisaVender");
 
   nombreInput.addEventListener("input", validarNombre);
   edadInput.addEventListener("input", validarEdad);
   rutInput.addEventListener("input", validarRut);
   emailInput.addEventListener("input", validarEmail);
+  divisaVenderInput.addEventListener("click", borrarDivisaVender);
 
   function validarNombre() {
     let nombre = nombreInput.value;
@@ -155,6 +157,9 @@ function habilitarValidacionEnTiempoReal() {
     }
   }
 
+  function borrarDivisaVender() {
+    divisaVenderInput.value = "";
+  }
 
   function esNombreValido(nombre) {
     let nombreSinEspacios = nombre.trim();
@@ -164,7 +169,6 @@ function habilitarValidacionEnTiempoReal() {
       /^[a-zA-Z\s]+$/.test(nombre)
     );
   }
-
 
   function esEdadValida(edad) {
     return !isNaN(edad) && edad >= 18 && edad <= 110;
@@ -180,9 +184,8 @@ function habilitarValidacionEnTiempoReal() {
     return regex.test(email);
   }
 }
-habilitarValidacionEnTiempoReal();
 
-actualizarResultado();
+habilitarValidacionEnTiempoReal();
 
 document.addEventListener("DOMContentLoaded", function () {
   let filtroInput = document.getElementById("filtro");
@@ -235,20 +238,60 @@ document.addEventListener("DOMContentLoaded", function () {
     let cantidad = document.getElementById("divisaVender").value;
     let monedaTienes = document.getElementById("monedaTienes").value;
     let monedaQuieres = document.getElementById("monedaQuieres").value;
-    document.getElementById('finalizacion').classList.remove('oculto');
 
-    let usuario = {
-      nombre: nombre,
-      edad: edad,
-      rut: rut,
-      email: email,
-      cantidad: cantidad,
-      monedaTienes: monedaTienes,
-      monedaQuieres: monedaQuieres,
-      sucursalSeleccionada: sucursalSeleccionada,
-
-    };
-
-    sessionStorage.setItem("usuario", JSON.stringify(usuario));
+    if (validarCampos()) {
+      let usuario = {
+        nombre: nombre,
+        edad: edad,
+        rut: rut,
+        email: email,
+        cantidad: cantidad,
+        monedaTienes: monedaTienes,
+        monedaQuieres: monedaQuieres,
+        sucursalSeleccionada: sucursalSeleccionada,
+      };
+      sessionStorage.setItem("usuario", JSON.stringify(usuario));
+      Swal.fire({
+        title: '¡Gracias por completar los datos, recibirás la notificación de tu transacción por medio de tu correo!',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        },
+        customClass: {
+          container: 'my-swal-container',
+          popup: 'my-swal-popup',
+        }
+      });
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: '¡Lo Sentimos!',
+        html: 'Por favor, completa todos los campos correctamente.',
+        width: '500px',
+        showConfirmButton: true,
+        confirmButtonText: 'Aceptar',
+        customClass: {
+          container: 'my-swal-container',
+          title: 'my-swal-title',
+          htmlContainer: 'my-swal-html-container',
+          confirmButton: 'my-swal-button',
+        },
+      });
+      
+    }
   });
+
+  function validarCampos() {
+    let nombre = document.getElementById("nombre").value;
+    let edad = document.getElementById("edad").value;
+    let rut = document.getElementById("rut").value;
+    let email = document.getElementById("email").value;
+
+    if (nombre.trim() === "" || edad.trim() === "" || rut.trim() === "" || email.trim() === "") {
+      return false; 
+    }
+    return true; 
+  }
 });

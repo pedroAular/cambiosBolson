@@ -77,15 +77,8 @@ input {
 .boton:hover {
   cursor: pointer;
 }
-
-.formularioDeCompra{
-  
-    background-color: #40558884;;
-
-}
 #resultado{
   margin-top: 10px;
-  background-color: #40558884;
   width: 260px;
   height: 100px;
   border-radius: 7px;
@@ -123,28 +116,40 @@ input {
 #mensaje {
   margin-top: 5px;
   font-weight: bold;
-  background-color: #40558884;
   overflow: auto;
   text-align: center;
   border-radius: 7px;
   padding: 20px;
 }
 
-#finalizacion{
-  width: 290px;
-  height: 150px; 
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 10px;
-  background-color: #40558884;
-  border-radius: 7%;
-  text-align: center;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  margin: auto;
-  border: 2px solid rgba(255, 149, 0, 0.857);
+.my-swal-popup {
+  border-radius: 10px;
+}
 
+.my-swal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 300px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
-.oculto {
-  display: none;
+
+.my-swal-title {
+  font-size: 20px;
 }
+
+.my-swal-html-container {
+  font-size: 16px;
+}
+
+.my-swal-button {
+  width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+
